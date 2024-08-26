@@ -153,3 +153,7 @@ cdef class PyAVOSimulator:
         self.thisptr.setGlobalTime(global_time)
     def setTimeStep(self, float time_step):
         self.thisptr.setTimeStep(time_step)
+    def setAgentCollabCoeff(self, size_t agent_no, float collab_coeff):
+        pass
+    def getAgentCollabCoeff(self, size_t agent_no):
+        pass
