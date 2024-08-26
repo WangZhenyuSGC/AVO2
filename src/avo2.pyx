@@ -157,3 +157,5 @@ cdef class PyAVOSimulator:
         pass
     def getAgentCollabCoeff(self, size_t agent_no):
         pass
+    def removeAgent(self, size_t agent_no):
+        pass

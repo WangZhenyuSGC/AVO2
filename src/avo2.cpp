@@ -2227,7 +2227,7 @@ int __pyx_module_is_main_avo2 = 0;
 static PyObject *__pyx_builtin_TypeError;
 /* #### Code section: string_decls ### */
 static const char __pyx_k_gc[] = "gc";
-static const char __pyx_k__55[] = "?";
+static const char __pyx_k__56[] = "?";
 static const char __pyx_k_pos[] = "pos";
 static const char __pyx_k_avo2[] = "avo2";
 static const char __pyx_k_line[] = "line";
@@ -2261,6 +2261,7 @@ static const char __pyx_k_time_step[] = "time_step";
 static const char __pyx_k_c_velocity[] = "c_velocity";
 static const char __pyx_k_global_time[] = "global_time";
 static const char __pyx_k_neighbor_no[] = "neighbor_no";
+static const char __pyx_k_removeAgent[] = "removeAgent";
 static const char __pyx_k_setTimeStep[] = "setTimeStep";
 static const char __pyx_k_timeHorizon[] = "timeHorizon";
 static const char __pyx_k_collab_coeff[] = "collab_coeff";
@@ -2308,6 +2309,7 @@ static const char __pyx_k_setAgentPrefVelocity[] = "setAgentPrefVelocity";
 static const char __pyx_k_PyAVOSimulator_doStep[] = "PyAVOSimulator.doStep";
 static const char __pyx_k_setAgentAccelInterval[] = "setAgentAccelInterval";
 static const char __pyx_k_PyAVOSimulator_addAgent[] = "PyAVOSimulator.addAgent";
+static const char __pyx_k_PyAVOSimulator_removeAgent[] = "PyAVOSimulator.removeAgent";
 static const char __pyx_k_PyAVOSimulator_setTimeStep[] = "PyAVOSimulator.setTimeStep";
 static const char __pyx_k_PyAVOSimulator_setGlobalTime[] = "PyAVOSimulator.setGlobalTime";
 static const char __pyx_k_PyAVOSimulator_getAgentRadius[] = "PyAVOSimulator.getAgentRadius";
@@ -2371,8 +2373,9 @@ static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_54setGlobalTime(struct __pyx_ob
 static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_56setTimeStep(struct __pyx_obj_4avo2_PyAVOSimulator *__pyx_v_self, float __pyx_v_time_step); /* proto */
 static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_58setAgentCollabCoeff(CYTHON_UNUSED struct __pyx_obj_4avo2_PyAVOSimulator *__pyx_v_self, CYTHON_UNUSED size_t __pyx_v_agent_no, CYTHON_UNUSED float __pyx_v_collab_coeff); /* proto */
 static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_60getAgentCollabCoeff(CYTHON_UNUSED struct __pyx_obj_4avo2_PyAVOSimulator *__pyx_v_self, CYTHON_UNUSED size_t __pyx_v_agent_no); /* proto */
-static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_62__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_4avo2_PyAVOSimulator *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_64__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_4avo2_PyAVOSimulator *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_62removeAgent(CYTHON_UNUSED struct __pyx_obj_4avo2_PyAVOSimulator *__pyx_v_self, CYTHON_UNUSED size_t __pyx_v_agent_no); /* proto */
+static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_64__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_4avo2_PyAVOSimulator *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_66__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_4avo2_PyAVOSimulator *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_tp_new_4avo2_PyAVOSimulator(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 /* #### Code section: late_includes ### */
 /* #### Code section: module_state ### */
@@ -2428,6 +2431,7 @@ typedef struct {
   PyObject *__pyx_n_s_PyAVOSimulator_getAgentRadius;
   PyObject *__pyx_n_s_PyAVOSimulator_getAgentTimeHoriz;
   PyObject *__pyx_n_s_PyAVOSimulator_getAgentVelocity;
+  PyObject *__pyx_n_s_PyAVOSimulator_removeAgent;
   PyObject *__pyx_n_s_PyAVOSimulator_setAgentAccelInte;
   PyObject *__pyx_n_s_PyAVOSimulator_setAgentCollabCoe;
   PyObject *__pyx_n_s_PyAVOSimulator_setAgentDefaults;
@@ -2443,7 +2447,7 @@ typedef struct {
   PyObject *__pyx_n_s_PyAVOSimulator_setGlobalTime;
   PyObject *__pyx_n_s_PyAVOSimulator_setTimeStep;
   PyObject *__pyx_n_s_TypeError;
-  PyObject *__pyx_n_s__55;
+  PyObject *__pyx_n_s__56;
   PyObject *__pyx_n_s_accelInterval;
   PyObject *__pyx_n_s_accel_interval;
   PyObject *__pyx_n_s_addAgent;
@@ -2498,6 +2502,7 @@ typedef struct {
   PyObject *__pyx_n_s_reduce;
   PyObject *__pyx_n_s_reduce_cython;
   PyObject *__pyx_n_s_reduce_ex;
+  PyObject *__pyx_n_s_removeAgent;
   PyObject *__pyx_n_s_self;
   PyObject *__pyx_n_s_setAgentAccelInterval;
   PyObject *__pyx_n_s_setAgentCollabCoeff;
@@ -2543,7 +2548,7 @@ typedef struct {
   PyObject *__pyx_tuple__45;
   PyObject *__pyx_tuple__47;
   PyObject *__pyx_tuple__49;
-  PyObject *__pyx_tuple__53;
+  PyObject *__pyx_tuple__54;
   PyObject *__pyx_codeobj__2;
   PyObject *__pyx_codeobj__5;
   PyObject *__pyx_codeobj__7;
@@ -2575,7 +2580,8 @@ typedef struct {
   PyObject *__pyx_codeobj__50;
   PyObject *__pyx_codeobj__51;
   PyObject *__pyx_codeobj__52;
-  PyObject *__pyx_codeobj__54;
+  PyObject *__pyx_codeobj__53;
+  PyObject *__pyx_codeobj__55;
 } __pyx_mstate;
 
 #if CYTHON_USE_MODULE_STATE
@@ -2639,6 +2645,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_PyAVOSimulator_getAgentRadius);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyAVOSimulator_getAgentTimeHoriz);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyAVOSimulator_getAgentVelocity);
+  Py_CLEAR(clear_module_state->__pyx_n_s_PyAVOSimulator_removeAgent);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyAVOSimulator_setAgentAccelInte);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyAVOSimulator_setAgentCollabCoe);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyAVOSimulator_setAgentDefaults);
@@ -2654,7 +2661,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_PyAVOSimulator_setGlobalTime);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyAVOSimulator_setTimeStep);
   Py_CLEAR(clear_module_state->__pyx_n_s_TypeError);
-  Py_CLEAR(clear_module_state->__pyx_n_s__55);
+  Py_CLEAR(clear_module_state->__pyx_n_s__56);
   Py_CLEAR(clear_module_state->__pyx_n_s_accelInterval);
   Py_CLEAR(clear_module_state->__pyx_n_s_accel_interval);
   Py_CLEAR(clear_module_state->__pyx_n_s_addAgent);
@@ -2709,6 +2716,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_reduce);
   Py_CLEAR(clear_module_state->__pyx_n_s_reduce_cython);
   Py_CLEAR(clear_module_state->__pyx_n_s_reduce_ex);
+  Py_CLEAR(clear_module_state->__pyx_n_s_removeAgent);
   Py_CLEAR(clear_module_state->__pyx_n_s_self);
   Py_CLEAR(clear_module_state->__pyx_n_s_setAgentAccelInterval);
   Py_CLEAR(clear_module_state->__pyx_n_s_setAgentCollabCoeff);
@@ -2754,7 +2762,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_tuple__45);
   Py_CLEAR(clear_module_state->__pyx_tuple__47);
   Py_CLEAR(clear_module_state->__pyx_tuple__49);
-  Py_CLEAR(clear_module_state->__pyx_tuple__53);
+  Py_CLEAR(clear_module_state->__pyx_tuple__54);
   Py_CLEAR(clear_module_state->__pyx_codeobj__2);
   Py_CLEAR(clear_module_state->__pyx_codeobj__5);
   Py_CLEAR(clear_module_state->__pyx_codeobj__7);
@@ -2786,7 +2794,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_codeobj__50);
   Py_CLEAR(clear_module_state->__pyx_codeobj__51);
   Py_CLEAR(clear_module_state->__pyx_codeobj__52);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__54);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__53);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__55);
   return 0;
 }
 #endif
@@ -2828,6 +2837,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_PyAVOSimulator_getAgentRadius);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyAVOSimulator_getAgentTimeHoriz);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyAVOSimulator_getAgentVelocity);
+  Py_VISIT(traverse_module_state->__pyx_n_s_PyAVOSimulator_removeAgent);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyAVOSimulator_setAgentAccelInte);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyAVOSimulator_setAgentCollabCoe);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyAVOSimulator_setAgentDefaults);
@@ -2843,7 +2853,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_PyAVOSimulator_setGlobalTime);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyAVOSimulator_setTimeStep);
   Py_VISIT(traverse_module_state->__pyx_n_s_TypeError);
-  Py_VISIT(traverse_module_state->__pyx_n_s__55);
+  Py_VISIT(traverse_module_state->__pyx_n_s__56);
   Py_VISIT(traverse_module_state->__pyx_n_s_accelInterval);
   Py_VISIT(traverse_module_state->__pyx_n_s_accel_interval);
   Py_VISIT(traverse_module_state->__pyx_n_s_addAgent);
@@ -2898,6 +2908,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_reduce);
   Py_VISIT(traverse_module_state->__pyx_n_s_reduce_cython);
   Py_VISIT(traverse_module_state->__pyx_n_s_reduce_ex);
+  Py_VISIT(traverse_module_state->__pyx_n_s_removeAgent);
   Py_VISIT(traverse_module_state->__pyx_n_s_self);
   Py_VISIT(traverse_module_state->__pyx_n_s_setAgentAccelInterval);
   Py_VISIT(traverse_module_state->__pyx_n_s_setAgentCollabCoeff);
@@ -2943,7 +2954,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_tuple__45);
   Py_VISIT(traverse_module_state->__pyx_tuple__47);
   Py_VISIT(traverse_module_state->__pyx_tuple__49);
-  Py_VISIT(traverse_module_state->__pyx_tuple__53);
+  Py_VISIT(traverse_module_state->__pyx_tuple__54);
   Py_VISIT(traverse_module_state->__pyx_codeobj__2);
   Py_VISIT(traverse_module_state->__pyx_codeobj__5);
   Py_VISIT(traverse_module_state->__pyx_codeobj__7);
@@ -2975,7 +2986,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_codeobj__50);
   Py_VISIT(traverse_module_state->__pyx_codeobj__51);
   Py_VISIT(traverse_module_state->__pyx_codeobj__52);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__54);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__53);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__55);
   return 0;
 }
 #endif
@@ -3031,6 +3043,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_PyAVOSimulator_getAgentRadius __pyx_mstate_global->__pyx_n_s_PyAVOSimulator_getAgentRadius
 #define __pyx_n_s_PyAVOSimulator_getAgentTimeHoriz __pyx_mstate_global->__pyx_n_s_PyAVOSimulator_getAgentTimeHoriz
 #define __pyx_n_s_PyAVOSimulator_getAgentVelocity __pyx_mstate_global->__pyx_n_s_PyAVOSimulator_getAgentVelocity
+#define __pyx_n_s_PyAVOSimulator_removeAgent __pyx_mstate_global->__pyx_n_s_PyAVOSimulator_removeAgent
 #define __pyx_n_s_PyAVOSimulator_setAgentAccelInte __pyx_mstate_global->__pyx_n_s_PyAVOSimulator_setAgentAccelInte
 #define __pyx_n_s_PyAVOSimulator_setAgentCollabCoe __pyx_mstate_global->__pyx_n_s_PyAVOSimulator_setAgentCollabCoe
 #define __pyx_n_s_PyAVOSimulator_setAgentDefaults __pyx_mstate_global->__pyx_n_s_PyAVOSimulator_setAgentDefaults
@@ -3046,7 +3059,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_PyAVOSimulator_setGlobalTime __pyx_mstate_global->__pyx_n_s_PyAVOSimulator_setGlobalTime
 #define __pyx_n_s_PyAVOSimulator_setTimeStep __pyx_mstate_global->__pyx_n_s_PyAVOSimulator_setTimeStep
 #define __pyx_n_s_TypeError __pyx_mstate_global->__pyx_n_s_TypeError
-#define __pyx_n_s__55 __pyx_mstate_global->__pyx_n_s__55
+#define __pyx_n_s__56 __pyx_mstate_global->__pyx_n_s__56
 #define __pyx_n_s_accelInterval __pyx_mstate_global->__pyx_n_s_accelInterval
 #define __pyx_n_s_accel_interval __pyx_mstate_global->__pyx_n_s_accel_interval
 #define __pyx_n_s_addAgent __pyx_mstate_global->__pyx_n_s_addAgent
@@ -3101,6 +3114,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_reduce __pyx_mstate_global->__pyx_n_s_reduce
 #define __pyx_n_s_reduce_cython __pyx_mstate_global->__pyx_n_s_reduce_cython
 #define __pyx_n_s_reduce_ex __pyx_mstate_global->__pyx_n_s_reduce_ex
+#define __pyx_n_s_removeAgent __pyx_mstate_global->__pyx_n_s_removeAgent
 #define __pyx_n_s_self __pyx_mstate_global->__pyx_n_s_self
 #define __pyx_n_s_setAgentAccelInterval __pyx_mstate_global->__pyx_n_s_setAgentAccelInterval
 #define __pyx_n_s_setAgentCollabCoeff __pyx_mstate_global->__pyx_n_s_setAgentCollabCoeff
@@ -3146,7 +3160,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_tuple__45 __pyx_mstate_global->__pyx_tuple__45
 #define __pyx_tuple__47 __pyx_mstate_global->__pyx_tuple__47
 #define __pyx_tuple__49 __pyx_mstate_global->__pyx_tuple__49
-#define __pyx_tuple__53 __pyx_mstate_global->__pyx_tuple__53
+#define __pyx_tuple__54 __pyx_mstate_global->__pyx_tuple__54
 #define __pyx_codeobj__2 __pyx_mstate_global->__pyx_codeobj__2
 #define __pyx_codeobj__5 __pyx_mstate_global->__pyx_codeobj__5
 #define __pyx_codeobj__7 __pyx_mstate_global->__pyx_codeobj__7
@@ -3178,7 +3192,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_codeobj__50 __pyx_mstate_global->__pyx_codeobj__50
 #define __pyx_codeobj__51 __pyx_mstate_global->__pyx_codeobj__51
 #define __pyx_codeobj__52 __pyx_mstate_global->__pyx_codeobj__52
-#define __pyx_codeobj__54 __pyx_mstate_global->__pyx_codeobj__54
+#define __pyx_codeobj__53 __pyx_mstate_global->__pyx_codeobj__53
+#define __pyx_codeobj__55 __pyx_mstate_global->__pyx_codeobj__55
 /* #### Code section: module_code ### */
 
 /* "avo2.pyx":68
@@ -8145,6 +8160,7 @@ static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_58setAgentCollabCoeff(CYTHON_UN
  *         pass
  *     def getAgentCollabCoeff(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         pass
+ *     def removeAgent(self, size_t agent_no):
  */
 
 /* Python wrapper */
@@ -8255,6 +8271,121 @@ static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_60getAgentCollabCoeff(CYTHON_UN
   return __pyx_r;
 }
 
+/* "avo2.pyx":160
+ *     def getAgentCollabCoeff(self, size_t agent_no):
+ *         pass
+ *     def removeAgent(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         pass
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_4avo2_14PyAVOSimulator_63removeAgent(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+static PyMethodDef __pyx_mdef_4avo2_14PyAVOSimulator_63removeAgent = {"removeAgent", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_4avo2_14PyAVOSimulator_63removeAgent, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_4avo2_14PyAVOSimulator_63removeAgent(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  CYTHON_UNUSED size_t __pyx_v_agent_no;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[1] = {0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("removeAgent (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_agent_no,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_agent_no)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(1, 160, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "removeAgent") < 0)) __PYX_ERR(1, 160, __pyx_L3_error)
+      }
+    } else if (unlikely(__pyx_nargs != 1)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+    }
+    __pyx_v_agent_no = __Pyx_PyInt_As_size_t(values[0]); if (unlikely((__pyx_v_agent_no == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(1, 160, __pyx_L3_error)
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("removeAgent", 1, 1, 1, __pyx_nargs); __PYX_ERR(1, 160, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("avo2.PyAVOSimulator.removeAgent", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_4avo2_14PyAVOSimulator_62removeAgent(((struct __pyx_obj_4avo2_PyAVOSimulator *)__pyx_v_self), __pyx_v_agent_no);
+
+  /* function exit code */
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_62removeAgent(CYTHON_UNUSED struct __pyx_obj_4avo2_PyAVOSimulator *__pyx_v_self, CYTHON_UNUSED size_t __pyx_v_agent_no) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("removeAgent", 1);
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
 /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
@@ -8262,15 +8393,15 @@ static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_60getAgentCollabCoeff(CYTHON_UN
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4avo2_14PyAVOSimulator_63__reduce_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_4avo2_14PyAVOSimulator_65__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_4avo2_14PyAVOSimulator_63__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_4avo2_14PyAVOSimulator_63__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_4avo2_14PyAVOSimulator_63__reduce_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_4avo2_14PyAVOSimulator_65__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_4avo2_14PyAVOSimulator_65__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_4avo2_14PyAVOSimulator_65__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -8295,14 +8426,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__reduce_cython__", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__reduce_cython__", 0))) return NULL;
-  __pyx_r = __pyx_pf_4avo2_14PyAVOSimulator_62__reduce_cython__(((struct __pyx_obj_4avo2_PyAVOSimulator *)__pyx_v_self));
+  __pyx_r = __pyx_pf_4avo2_14PyAVOSimulator_64__reduce_cython__(((struct __pyx_obj_4avo2_PyAVOSimulator *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_62__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_4avo2_PyAVOSimulator *__pyx_v_self) {
+static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_64__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_4avo2_PyAVOSimulator *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_lineno = 0;
@@ -8342,15 +8473,15 @@ static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_62__reduce_cython__(CYTHON_UNUS
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4avo2_14PyAVOSimulator_65__setstate_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_4avo2_14PyAVOSimulator_67__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_4avo2_14PyAVOSimulator_65__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_4avo2_14PyAVOSimulator_65__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_4avo2_14PyAVOSimulator_65__setstate_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_4avo2_14PyAVOSimulator_67__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_4avo2_14PyAVOSimulator_67__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_4avo2_14PyAVOSimulator_67__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -8424,7 +8555,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_4avo2_14PyAVOSimulator_64__setstate_cython__(((struct __pyx_obj_4avo2_PyAVOSimulator *)__pyx_v_self), __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_4avo2_14PyAVOSimulator_66__setstate_cython__(((struct __pyx_obj_4avo2_PyAVOSimulator *)__pyx_v_self), __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -8437,7 +8568,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_64__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_4avo2_PyAVOSimulator *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_4avo2_14PyAVOSimulator_66__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_4avo2_PyAVOSimulator *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_lineno = 0;
@@ -8538,8 +8669,9 @@ static PyMethodDef __pyx_methods_4avo2_PyAVOSimulator[] = {
   {"setTimeStep", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_4avo2_14PyAVOSimulator_57setTimeStep, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {"setAgentCollabCoeff", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_4avo2_14PyAVOSimulator_59setAgentCollabCoeff, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {"getAgentCollabCoeff", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_4avo2_14PyAVOSimulator_61getAgentCollabCoeff, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_4avo2_14PyAVOSimulator_63__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_4avo2_14PyAVOSimulator_65__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"removeAgent", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_4avo2_14PyAVOSimulator_63removeAgent, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_4avo2_14PyAVOSimulator_65__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_4avo2_14PyAVOSimulator_67__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 #if CYTHON_USE_TYPE_SPECS
@@ -8675,6 +8807,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_PyAVOSimulator_getAgentRadius, __pyx_k_PyAVOSimulator_getAgentRadius, sizeof(__pyx_k_PyAVOSimulator_getAgentRadius), 0, 0, 1, 1},
     {&__pyx_n_s_PyAVOSimulator_getAgentTimeHoriz, __pyx_k_PyAVOSimulator_getAgentTimeHoriz, sizeof(__pyx_k_PyAVOSimulator_getAgentTimeHoriz), 0, 0, 1, 1},
     {&__pyx_n_s_PyAVOSimulator_getAgentVelocity, __pyx_k_PyAVOSimulator_getAgentVelocity, sizeof(__pyx_k_PyAVOSimulator_getAgentVelocity), 0, 0, 1, 1},
+    {&__pyx_n_s_PyAVOSimulator_removeAgent, __pyx_k_PyAVOSimulator_removeAgent, sizeof(__pyx_k_PyAVOSimulator_removeAgent), 0, 0, 1, 1},
     {&__pyx_n_s_PyAVOSimulator_setAgentAccelInte, __pyx_k_PyAVOSimulator_setAgentAccelInte, sizeof(__pyx_k_PyAVOSimulator_setAgentAccelInte), 0, 0, 1, 1},
     {&__pyx_n_s_PyAVOSimulator_setAgentCollabCoe, __pyx_k_PyAVOSimulator_setAgentCollabCoe, sizeof(__pyx_k_PyAVOSimulator_setAgentCollabCoe), 0, 0, 1, 1},
     {&__pyx_n_s_PyAVOSimulator_setAgentDefaults, __pyx_k_PyAVOSimulator_setAgentDefaults, sizeof(__pyx_k_PyAVOSimulator_setAgentDefaults), 0, 0, 1, 1},
@@ -8690,7 +8823,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_PyAVOSimulator_setGlobalTime, __pyx_k_PyAVOSimulator_setGlobalTime, sizeof(__pyx_k_PyAVOSimulator_setGlobalTime), 0, 0, 1, 1},
     {&__pyx_n_s_PyAVOSimulator_setTimeStep, __pyx_k_PyAVOSimulator_setTimeStep, sizeof(__pyx_k_PyAVOSimulator_setTimeStep), 0, 0, 1, 1},
     {&__pyx_n_s_TypeError, __pyx_k_TypeError, sizeof(__pyx_k_TypeError), 0, 0, 1, 1},
-    {&__pyx_n_s__55, __pyx_k__55, sizeof(__pyx_k__55), 0, 0, 1, 1},
+    {&__pyx_n_s__56, __pyx_k__56, sizeof(__pyx_k__56), 0, 0, 1, 1},
     {&__pyx_n_s_accelInterval, __pyx_k_accelInterval, sizeof(__pyx_k_accelInterval), 0, 0, 1, 1},
     {&__pyx_n_s_accel_interval, __pyx_k_accel_interval, sizeof(__pyx_k_accel_interval), 0, 0, 1, 1},
     {&__pyx_n_s_addAgent, __pyx_k_addAgent, sizeof(__pyx_k_addAgent), 0, 0, 1, 1},
@@ -8745,6 +8878,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_reduce, __pyx_k_reduce, sizeof(__pyx_k_reduce), 0, 0, 1, 1},
     {&__pyx_n_s_reduce_cython, __pyx_k_reduce_cython, sizeof(__pyx_k_reduce_cython), 0, 0, 1, 1},
     {&__pyx_n_s_reduce_ex, __pyx_k_reduce_ex, sizeof(__pyx_k_reduce_ex), 0, 0, 1, 1},
+    {&__pyx_n_s_removeAgent, __pyx_k_removeAgent, sizeof(__pyx_k_removeAgent), 0, 0, 1, 1},
     {&__pyx_n_s_self, __pyx_k_self, sizeof(__pyx_k_self), 0, 0, 1, 1},
     {&__pyx_n_s_setAgentAccelInterval, __pyx_k_setAgentAccelInterval, sizeof(__pyx_k_setAgentAccelInterval), 0, 0, 1, 1},
     {&__pyx_n_s_setAgentCollabCoeff, __pyx_k_setAgentCollabCoeff, sizeof(__pyx_k_setAgentCollabCoeff), 0, 0, 1, 1},
@@ -9115,15 +9249,24 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         pass
  *     def getAgentCollabCoeff(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         pass
+ *     def removeAgent(self, size_t agent_no):
  */
   __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_avo2_pyx, __pyx_n_s_getAgentCollabCoeff, 158, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(1, 158, __pyx_L1_error)
+
+  /* "avo2.pyx":160
+ *     def getAgentCollabCoeff(self, size_t agent_no):
+ *         pass
+ *     def removeAgent(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         pass
+ */
+  __pyx_codeobj__52 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_avo2_pyx, __pyx_n_s_removeAgent, 160, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__52)) __PYX_ERR(1, 160, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
  * def __setstate_cython__(self, __pyx_state):
  */
-  __pyx_codeobj__52 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_reduce_cython, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__52)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_reduce_cython, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 1, __pyx_L1_error)
 
   /* "(tree fragment)":3
  * def __reduce_cython__(self):
@@ -9131,10 +9274,10 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
  */
-  __pyx_tuple__53 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_pyx_state); if (unlikely(!__pyx_tuple__53)) __PYX_ERR(0, 3, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__53);
-  __Pyx_GIVEREF(__pyx_tuple__53);
-  __pyx_codeobj__54 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__53, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 3, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__54)) __PYX_ERR(0, 3, __pyx_L1_error)
+  __pyx_tuple__54 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_pyx_state); if (unlikely(!__pyx_tuple__54)) __PYX_ERR(0, 3, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__54);
+  __Pyx_GIVEREF(__pyx_tuple__54);
+  __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__54, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 3, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -9911,10 +10054,23 @@ if (!__Pyx_RefNanny) {
  *         pass
  *     def getAgentCollabCoeff(self, size_t agent_no):             # <<<<<<<<<<<<<<
  *         pass
+ *     def removeAgent(self, size_t agent_no):
  */
   __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_4avo2_14PyAVOSimulator_61getAgentCollabCoeff, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyAVOSimulator_getAgentCollabCoe, NULL, __pyx_n_s_avo2, __pyx_d, ((PyObject *)__pyx_codeobj__51)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_4avo2_PyAVOSimulator, __pyx_n_s_getAgentCollabCoeff, __pyx_t_2) < 0) __PYX_ERR(1, 158, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  PyType_Modified(__pyx_ptype_4avo2_PyAVOSimulator);
+
+  /* "avo2.pyx":160
+ *     def getAgentCollabCoeff(self, size_t agent_no):
+ *         pass
+ *     def removeAgent(self, size_t agent_no):             # <<<<<<<<<<<<<<
+ *         pass
+ */
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_4avo2_14PyAVOSimulator_63removeAgent, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyAVOSimulator_removeAgent, NULL, __pyx_n_s_avo2, __pyx_d, ((PyObject *)__pyx_codeobj__52)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 160, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_4avo2_PyAVOSimulator, __pyx_n_s_removeAgent, __pyx_t_2) < 0) __PYX_ERR(1, 160, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_4avo2_PyAVOSimulator);
 
@@ -9923,7 +10079,7 @@ if (!__Pyx_RefNanny) {
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
  * def __setstate_cython__(self, __pyx_state):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_4avo2_14PyAVOSimulator_63__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyAVOSimulator___reduce_cython, NULL, __pyx_n_s_avo2, __pyx_d, ((PyObject *)__pyx_codeobj__52)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_4avo2_14PyAVOSimulator_65__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyAVOSimulator___reduce_cython, NULL, __pyx_n_s_avo2, __pyx_d, ((PyObject *)__pyx_codeobj__53)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -9934,7 +10090,7 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_4avo2_14PyAVOSimulator_65__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyAVOSimulator___setstate_cython, NULL, __pyx_n_s_avo2, __pyx_d, ((PyObject *)__pyx_codeobj__54)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 3, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_4avo2_14PyAVOSimulator_67__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyAVOSimulator___setstate_cython, NULL, __pyx_n_s_avo2, __pyx_d, ((PyObject *)__pyx_codeobj__55)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -13626,7 +13782,7 @@ __Pyx_PyType_GetName(PyTypeObject* tp)
     if (unlikely(name == NULL) || unlikely(!PyUnicode_Check(name))) {
         PyErr_Clear();
         Py_XDECREF(name);
-        name = __Pyx_NewRef(__pyx_n_s__55);
+        name = __Pyx_NewRef(__pyx_n_s__56);
     }
     return name;
 }
